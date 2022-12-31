@@ -131,3 +131,8 @@ h1 {
 .main {
   display: none;
 }
+
+.flexbox {
+  display: flex;
+  
+}
