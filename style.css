@@ -1,0 +1,133 @@
+body {
+    padding: 5%;
+    background-color: black;
+}
+
+h1 {
+	margin: auto;
+	letter-spacing: 0.0015em;
+	font-size: 5em !important;
+	text-shadow: 0 1px #232425, -1px 0 #37383d, -1px 2px #232425, -2px 1px #37383d,
+		-2px 3px #232425, -3px 2px #37383d, -3px 4px #232425, -4px 3px #37383d,
+		-4px 5px #232425, -5px 4px #37383d, -5px 6px #232425, -6px 5px #37383d,
+		-6px 7px #232425, -7px 6px #37383d, -7px 8px #232425, -8px 7px #37383d;
+	text-align: center;
+  font-family: "Henny Penny", cursive;
+  color:rgb(253, 252, 170);
+}
+
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+.cb-slideshow:after { 
+    content: '';
+    background: transparent url(../images/pattern.png) repeat top left; 
+}
+
+.cb-slideshow li span { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 18s linear infinite 0s; 
+  list-style: none;
+}
+
+.cb-slideshow li div { 
+  z-index: 1000;
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation: titleAnimation 18s linear infinite 0s; 
+}
+
+.cb-slideshow li div p {
+  font-size: x-large;
+  color: white;
+}
+
+.cb-slideshow li:nth-child(1) span { 
+  background-image: url(chaipilo.gif) 
+}
+.cb-slideshow li:nth-child(2) span { 
+  background-image: url(dametucosita.gif);
+  animation-delay: 3s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+  background-image: url(daya.gif);
+  animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+  background-image: url(egg.jpg);
+  animation-delay: 9s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+  background-image: url(marjan-blan-marjanblan-fCnU57cVwTY-unsplash.jpg);
+  animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+  background-image: url(rick.gif);
+  animation-delay: 15s; 
+}
+
+.cb-slideshow li:nth-child(2) div { 
+  animation-delay: 3s; 
+}
+.cb-slideshow li:nth-child(3) div { 
+  animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(4) div { 
+  animation-delay: 9s; 
+}
+.cb-slideshow li:nth-child(5) div { 
+  animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(6) div { 
+  animation-delay: 15s; 
+}
+
+@keyframes imageAnimation { 
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  8% { opacity: 1; animation-timing-function: ease-out; }
+  17% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+@keyframes titleAnimation { 
+  0% { opacity: 0 }
+  8% { opacity: 1 }
+  17% { opacity: 1 }
+  19% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+@media screen and (max-width: 1140px) { 
+  .cb-slideshow li div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) { 
+  .cb-slideshow li div h3 { font-size: 80px }
+}
+
+.main {
+  display: none;
+}
