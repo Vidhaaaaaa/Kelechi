@@ -1,11 +1,7 @@
 .frame1-container {
   min-height: 100vh;
 }
-.frame-main {
-  margin: auto;
-  width: 50%;
-  padding: 10px;  
-}
+
 .frame1-frame1 {
   width: 100%;
   height: 717px;
